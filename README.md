@@ -1,8 +1,14 @@
 # Circle - React Creative Template
 
+![CoverImage](./src/assets/preview/cover-image.png)
+
 Circle is a React Creative Template. It is a modern, clean and professional template. It helps you to make your own site. It is suitable for any startup business, companies, agencies, and freelancers which need a professional way to showcase their projects and services with 100% super responsive experience.
 
-Circle theme is still in development. We are working on adding more components, sections, pages and features to it. If you have any suggestions or feedback, please feel free to contact us.
+Circle theme is going through a lot of changes. We are adding new components and features to it. You can check the [Changelog](./CHANGELOG.md) to see what's new. There might be some breaking changes in the future as the theme is still new and in development. There will be a proper roadmap for the theme soon. Till then, you can check the [Todo](#todo) section and list of components below.
+
+## Demo
+
+[![View Demo Button](./src/assets/preview/preview-button.png)](https://circle-theme-app-unjsb.ondigitalocean.app/)
 
 ## Installation
 
@@ -17,18 +23,7 @@ Circle theme is still in development. We are working on adding more components, 
 
 ## Changelog
 
-### 1.0.0
-
-- Initial Release
-
-### 1.1.0
-
-- Added: `README.md` files for each component, section, layout, page, widget and dialog.
-- Added: New documentation page // TODO:: Work on this
-- Breaking Change: Removed 'BlogCard' and 'WorkCard' components. They are now replaced with [Card](./src/components/Card/) component.
-- Breaking Change: [PageContainer](./src/layouts/PageContainer.tsx) now does not wrap content width. It is now the responsibility of the [PageSection](./src/layouts/PageSection.tsx) component to wrap the content width. Wrap the content in [PageSection](./src/layouts/PageSection.tsx) component to get the same result as before.
-- Breaking Change: [CtaBox](./src/components/CtaBox/) component now has a new prop 'button' which is a JSX.Element. It is now the responsibility of the parent component to pass the button as a prop.
-- Added: [PricingCard](./src/components/PricingCard/) component.
+[Browse the changelog](./CHANGELOG.md)
 
 ## Components List
 
@@ -100,4 +95,4 @@ Circle theme is still in development. We are working on adding more components, 
 
 ## More
 
-Stay tuned for more updates. If you have any questions, please contact me on twitter: [cold_weathrr](https://www.twitter.com/cold_weathrr)
+Stay tuned for more updates.

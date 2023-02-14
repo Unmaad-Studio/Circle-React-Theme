@@ -39,9 +39,15 @@ import SectionHeader from "@pathTo/components/SectionHeader/SectionHeader";
 />
 ```
 
+### Change Log
+
+#### 1.0.0
+
+- Initial Release
+
 ### Preview
 
-![Section Header](https://raw.githubusercontent.com/creativetimofficial/ct-material-kit-pro-react-v1.1.0/master/public/assets/img/section-header.png)
+[Image: Section Header]
 
 ### Path
 

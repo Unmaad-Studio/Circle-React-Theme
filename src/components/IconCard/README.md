@@ -33,7 +33,7 @@ import IconCard from "@pathTo/components/IconCard/IconCard";
 
 ### Preview
 
-![IconCard](https://user-images.githubusercontent.com/20182642/103143000-1b2b4a00-470f-11eb-9b9a-1b2b2b2e2b1a.png)
+[Image: Icon Card]
 
 ### Changelog
 

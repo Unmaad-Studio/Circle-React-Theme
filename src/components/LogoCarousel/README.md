@@ -38,10 +38,6 @@ import LogoCarousel from "@pathTo/components/LogoCarousel/LogoCarousel";
 
 - Initial Release
 
-#### 1.1.0
-
-- No changes
-
 ### Path
 
 /src/components/LogoCarousel/README.md
