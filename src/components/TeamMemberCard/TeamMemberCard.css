@@ -1,0 +1,84 @@
+.TeamMemberCard {
+  align-items: flex-start;
+  background-color: var(--color-background-light);
+  border: 2px solid var(--color-background-light);
+  border-radius: var(--border-radius-large);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 100%;
+}
+
+.TeamMemberCard.CenterContent {
+  align-items: center;
+  text-align: center;
+}
+
+.TeamMemberCard:hover {
+  background-color: var(--color-background);
+  border: 2px solid var(--color-border);
+  transform: scale(1.05);
+}
+
+.TeamMemberCardImageContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.TeamMemberCardImageContainer img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-top-left-radius: calc(var(--border-radius-large) - 3px);
+  border-top-right-radius: calc(var(--border-radius-large) - 3px);
+}
+
+.TeamMemberCardTextContainer {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: flex-start;
+  padding: 24px;
+  width: 100%;
+}
+
+.TeamMemberCardTextContainer h3 {
+  color: var(--color-text);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  width: 100%;
+}
+
+.TeamMemberCard.CenterContent .TeamMemberCardTextContainer h3 {
+  text-align: center;
+}
+
+.TeamMemberCardTextContainer h4 {
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  width: 100%;
+}
+
+.TeamMemberCard.CenterContent .TeamMemberCardTextContainer h4 {
+  text-align: center;
+}
+
+.TeamMemberCardTextContainer p {
+  color: var(--color-text-light);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.TeamMemberCard.CenterContent .TeamMemberCardTextContainer p {
+  text-align: center;
+}

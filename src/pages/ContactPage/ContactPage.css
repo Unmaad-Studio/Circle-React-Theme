@@ -1,0 +1,95 @@
+.ContactFormContainer {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.ContactForm {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.ContactFormRow {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.ContactFormCol {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.ContactFormCol label {
+    color: var(--color-text-light);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ContactFormCol input, .ContactFormCol textarea {
+    width: 100%;
+}
+
+.ContactFormCol textarea {
+    min-height: 200px;
+    max-width: 100%;
+    min-width: 200px;
+}
+
+.ContactMap {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 50%;
+}
+
+.ContactMapPlaceholder {
+    align-items: center;
+    background-color: var(--color-background-light);
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius-large);
+    color: var(--color-text-light);
+    display: flex;
+    font-size: 1.3rem;
+    height: 590px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .ContactFormContainer {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .ContactFormRow {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .ContactForm {
+        width: 100%;
+    }
+
+    .ContactMap {
+        width: 100%;
+    }
+}

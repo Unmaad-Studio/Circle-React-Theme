@@ -1,0 +1,75 @@
+.Button {
+  align-items: center;
+  display: flex;
+  padding: 0 1.2em;
+  border: 2px solid var(--color-primary);
+  border-radius: calc(var(--border-radius-large) * 2);
+  background: var(--color-primary);
+  color: var(--color-text-primary);
+  font-size: 1em;
+  gap: 0.7em;
+  height: 48px;
+  justify-content: center;
+  line-height: 1.5;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.Button svg {
+  font-size: 1.1rem;
+}
+
+.Button:hover {
+  background: var(--color-background);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  color: var(--color-text);
+}
+
+.Button:active {
+  transform: scale(0.95);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Type: Soft */
+.Button.soft {
+  background: var(--color-background);
+  border: 2px solid transparent;
+  color: var(--color-primary);
+}
+
+.Button.soft::before {
+  background: var(--color-primary);
+  border-radius: 24px;
+  content: " ";
+  height: 100%;
+  left: 0;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  transition: 0.2s ease-in-out;
+  width: 100%;
+}
+
+.Button.soft:hover {
+  color: var(--color-text);
+}
+
+.Button.soft:hover::before {
+  opacity: 0.8;
+}
+
+/* Button Type: Outlined */
+.Button.outlined {
+  background: var(--color-background);
+  border: 2px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.Button.outlined:hover {
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  color: var(--color-text-primary);
+}

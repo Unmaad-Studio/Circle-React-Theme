@@ -1,0 +1,127 @@
+/**
+  * Font-Family: Outfit
+  */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/**
+  * App: Global CSS
+  */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: 600;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 600;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+a:hover {
+  color: var(--color-text);
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-text);
+}
+
+input,
+textarea {
+  background-color: var(--color-background);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius-large);
+  color: var(--color-text);
+  font-weight: 500;
+  padding: 24px 20px;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+input[type="submit"] {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 24px 20px;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+input[type="submit"]:hover {
+  background-color: var(--color-background);
+  border: 2px solid var(--color-primary);
+  color: var(--color-text);
+  cursor: pointer;
+  font-weight: 600;
+  padding: 24px 20px;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+input:hover,
+textarea:hover {
+  border: 2px solid var(--color-secondary);
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid var(--color-primary);
+}
+
+p {
+  color: var(--color-text-light);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-background-light);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: var(--border-radius-large);
+  width: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}

@@ -1,0 +1,7 @@
+// Define imports for images and other assets
+declare module "*.png";
+declare module "*.jpg";
+declare module "*.jpeg";
+declare module "*.gif";
+declare module "*.bmp";
+declare module "*.svg";

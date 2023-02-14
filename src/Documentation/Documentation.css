@@ -1,0 +1,142 @@
+.DocumentationPage {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 100vh;
+  width: 100%;
+}
+
+.DocumentationPage img {
+  max-width: 100%;
+}
+
+.DocumentationSidebar {
+  align-items: flex-start;
+  background-color: var(--color-background);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: flex-start;
+  left: 0;
+  padding: 36px 0;
+  position: fixed;
+  top: 0;
+  width: 300px;
+}
+
+.DocumentationSidebar h2 {
+  color: var(--color-text);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 32px;
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+.DocumentationSidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.DocumentationSidebar li {
+  margin: 0;
+  padding: 0;
+}
+
+.DocumentationSidebar ul li a {
+  color: var(--color-text-light);
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 12px 32px;
+  text-decoration: none;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.DocumentationSidebar ul li a.active {
+  color: var(--color-text);
+}
+
+.DocumentationSidebar ul li a:hover {
+  color: var(--color-primary);
+}
+
+.DocumentationSidebar ul li ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 24px;
+}
+
+.DocumentationContent {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 36px 0;
+  width: calc(100vw - 300px);
+}
+
+.DocumentationPage__content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 36px 0;
+  width: 100%;
+}
+
+.DocumentationPage__content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 24px 0 12px 0;
+}
+
+.DocumentationPage__content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+
+.DocumentationPage__content ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 12px 0;
+  padding-left: 24px;
+}
+
+.DocumentationPage__content li {
+  margin: 8px 0;
+}
+
+.DocumentationPage__content code {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 4px 8px;
+}
+
+.DocumentationPage__content pre span {
+  display: inline-block;
+  margin: 0 4px;
+}
+
+/* Media Queries */
+@media (max-width: 1000px) {
+  .DocumentationSidebar {
+    display: none;
+  }
+
+  .DocumentationContent {
+    width: 100%;
+  }
+}

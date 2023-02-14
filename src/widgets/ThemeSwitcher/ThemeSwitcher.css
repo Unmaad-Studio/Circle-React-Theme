@@ -1,0 +1,74 @@
+/* Theme Switcher */
+.AppThemes {
+  align-items: flex-start;
+  background-color: var(--color-background-light);
+  border-top-left-radius: var(--border-radius-large);
+  border-bottom-left-radius: var(--border-radius-large);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: flex-end;
+  padding: 12px;
+  position: fixed;
+  right: 0;
+  top: 50vh;
+  text-align: center;
+  transform: translateY(-50%);
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 150px;
+  z-index: 900;
+}
+
+.AppThemes h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 12px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.AppThemes button {
+  background-color: var(--color-background);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 12px;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 100%;
+}
+
+.AppThemes button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+}
+
+.AppThemesOpenButton {
+  align-items: center;
+  background-color: var(--color-background-light);
+  border-top-left-radius: var(--border-radius-large);
+  border-bottom-left-radius: var(--border-radius-large);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  height: 56px;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  top: 50vh;
+  transform: translateY(-50%);
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 56px;
+  z-index: 900;
+}
+
+.AppThemesOpenButton:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+}
+
+.AppThemesOpenButton svg {
+  color: var(--color-text);
+  font-size: 1.2rem;
+}

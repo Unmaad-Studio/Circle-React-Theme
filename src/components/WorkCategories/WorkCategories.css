@@ -1,0 +1,51 @@
+.WorkCategoriesList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -10px;
+}
+
+.WorkCategoriesItem {
+    align-items: center;
+    background-color: var(--color-background-light);
+    border: 2px solid var(--color-background-light);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    gap: 8px;
+    justify-content: center;
+    margin: 10px;
+    padding: 6px 12px;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.WorkCategoriesItem svg {
+    color: var(--color-text);
+    font-size: 1.2rem;
+}
+
+.WorkCategoriesItem:hover {
+    background-color: var(--color-background);
+    border: 2px solid var(--color-border);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.WorkCategoriesItem.active {
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    color: var(--color-text-primary);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.WorkCategoriesItem.active p {
+    color: var(--color-text-primary);
+}
+
+.WorkCategoriesItem.active svg {
+    color: var(--color-text-primary);
+}

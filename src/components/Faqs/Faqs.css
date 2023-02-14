@@ -1,0 +1,114 @@
+.Faqs {
+  align-items: flex-start;
+  background-color: var(--color-background);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius-large);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.FaqItem {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.FaqItem__question {
+  align-items: flex-start;
+  border-top: 2px solid var(--color-border);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 100%;
+}
+
+.FaqItem:first-child .FaqItem__question {
+  border-top-left-radius: var(--border-radius-large);
+  border-top-right-radius: var(--border-radius-large);
+  border-top: none;
+}
+
+.FaqItem:last-child .FaqItem__question {
+  border-bottom-left-radius: var(--border-radius-large);
+  border-bottom-right-radius: var(--border-radius-large);
+}
+
+.FaqItem__question:hover {
+  background-color: var(--color-background-light);
+}
+
+.FaqItem__question h3 {
+  color: var(--color-text);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.FaqItem__question button {
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 700;
+  outline: none;
+  padding: 0;
+  position: relative;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.FaqItem__question button:hover {
+  color: var(--color-primary);
+}
+
+.FaqItem__question button svg {
+  font-size: 1.25rem;
+  margin-left: 8px;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.FaqItem__question button svg.rotate {
+  transform: rotate(180deg);
+}
+
+.FaqItem__answer {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 100%;
+}
+
+.FaqItem__answer p {
+  color: var(--color-text-light);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 16px;
+}
+
+.FaqItem__answer a {
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  text-decoration: none;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.FaqItem__answer a:hover {
+  color: var(--color-primary-light);
+}
+
+.FaqItem__answer a svg {
+  margin-left: 8px;
+}

@@ -1,0 +1,35 @@
+/**
+* Circle Sharp Theme
+* @author: @cold_weathrr
+*/
+
+:root {
+  /* Colors */
+  --color-primary: #ff4800;
+  --color-secondary: #ffbc99;
+  --color-tertiary: rgb(157, 223, 156);
+
+  --color-text: #24262f;
+  --color-text-light: #777e90;
+  --color-text-primary: #ffffff;
+
+  --color-background: #fcfcfd;
+  --color-background-light: #f4f5f6;
+
+  --color-border: #e6e6e6;
+
+  /* Dimensions */
+  --border-radius: 0px;
+  --border-radius-large: 0px;
+  --border-radius-small: 0px;
+
+  /* Font Size */
+  --font-size: 16px;
+
+  /* Shadows */
+  --shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  --shadow-large: 0 0 40px rgba(0, 0, 0, 0.1);
+
+  /* Fonts */
+  --font-family: "Outfit", sans-serif;
+}

@@ -1,0 +1,35 @@
+/**
+* Circle Dark Theme
+* @author: @cold_weathrr
+*/
+
+:root {
+    /* Colors */
+    --color-primary: #2B85FF;
+    --color-secondary: #FFBC99;
+    --color-tertiary: rgb(157, 223, 156);
+
+    --color-text: #ffffff;
+    --color-text-light: #bebebe;
+    --color-text-primary: #FFFFFF;
+
+    --color-background: #1e1e1e;
+    --color-background-light: #252525;
+
+    --color-border: #252525;
+
+    /* Dimensions */
+    --border-radius: 8px;
+    --border-radius-large: 16px;
+    --border-radius-small: 4px;
+
+    /* Font Size */
+    --font-size: 16px;
+
+    /* Shadows */
+    --shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    --shadow-large: 0 0 40px rgba(0, 0, 0, 0.1);
+
+    /* Fonts */
+    --font-family: 'Outfit', sans-serif;
+}

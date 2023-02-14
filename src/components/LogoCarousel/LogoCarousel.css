@@ -1,0 +1,38 @@
+.LogoCarousel {
+  background-color: var(--color-background-light);
+  border-radius: var(--border-radius-large);
+  display: block;
+  height: 140px;
+  max-width: 100%;
+  padding: 50px 0;
+  overflow-x: hidden;
+}
+
+.LogoCarousel__Inner {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.LogoCarousel__Logo {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 0 32px;
+  opacity: 0.5;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.LogoCarousel__Logo:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.LogoCarousel__Logo img {
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}

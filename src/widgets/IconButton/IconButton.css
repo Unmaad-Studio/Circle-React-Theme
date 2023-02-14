@@ -1,0 +1,77 @@
+.IconButton {
+  align-items: center;
+  border: 2px solid var(--color-primary);
+  background: var(--color-primary);
+  border-radius: calc(var(--border-radius-large) * 2);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  display: flex;
+  height: 42px;
+  justify-content: center;
+  outline: none;
+  padding: 0;
+  position: relative;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 42px;
+}
+
+.IconButton:hover {
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.IconButton svg {
+  font-size: 1.1rem;
+}
+
+/* Button Type: Solid */
+.IconButton.solid {
+  background: var(--color-text);
+  border: 2px solid var(--color-text);
+  color: var(--color-background);
+}
+
+.IconButton.solid:hover {
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+/* Button Type: Soft */
+.IconButton.soft {
+  background: var(--color-background);
+  border: 2px solid transparent;
+  color: var(--color-primary);
+}
+
+.IconButton.soft::before {
+  background: var(--color-primary);
+  border-radius: 50%;
+  content: " ";
+  height: 100%;
+  left: 0;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  transition: 0.2s ease-in-out;
+  width: 100%;
+}
+
+.IconButton.soft:hover {
+  color: var(--color-text);
+}
+
+.IconButton.soft:hover::before {
+  opacity: 0.8;
+}
+
+/* Button Type: Outlined */
+.IconButton.outlined {
+  background: var(--color-background);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.IconButton.outlined:hover {
+  background: var(--color-primary);
+  color: var(--color-text-primary);
+}

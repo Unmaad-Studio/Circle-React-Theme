@@ -1,0 +1,60 @@
+.PricingCard {
+  padding: 6px 12px;
+}
+
+.PricingCard__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.PricingCard__header svg {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.PricingCard__header .PricingCard__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.PricingCard__header .PricingCard__price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.PricingCard__content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.PricingCard__content li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 0.3rem 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text-light);
+}
+
+.PricingCard__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
