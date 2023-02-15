@@ -1,5 +1,10 @@
 ## Changelog
 
+### 1.1.3
+
+- Improved `README.md` design and documentation.
+- Added [SocialMediaRow](./src/widgets/SocialMeidaRow/) widget.
+
 ### 1.1.2
 
 - [Theme Switcher](./src/widgets/ThemeSwitcher/) `README.md` added.

@@ -1,14 +1,12 @@
-# Circle - React Creative Template
-
-![CoverImage](./src/assets/preview/cover-image.png)
+[![View Demo Button](./src/assets/preview/Git-Cover.png)](https://circle-theme-app-unjsb.ondigitalocean.app/)
 
 Circle is a React Creative Template. It is a modern, clean and professional template. It helps you to make your own site. It is suitable for any startup business, companies, agencies, and freelancers which need a professional way to showcase their projects and services with 100% super responsive experience.
 
-Circle theme is going through a lot of changes. We are adding new components and features to it. You can check the [Changelog](./CHANGELOG.md) to see what's new. There might be some breaking changes in the future as the theme is still new and in development. There will be a proper roadmap for the theme soon. Till then, you can check the [Todo](#todo) section and list of components below.
+Circle theme is going through a lot of changes. We are adding new components and features to it. You can check the [Changelog](./CHANGELOG.md) to see what's new. There might be some breaking changes in the future as the theme is still new and in development. There will be a proper roadmap for the theme soon.
 
-## Demo
-
-[![View Demo Button](./src/assets/preview/preview-button.png)](https://circle-theme-app-unjsb.ondigitalocean.app/)
+[<img src="./src/assets/preview/preview-button.png" width="163" height="42" />](https://circle-theme-app-unjsb.ondigitalocean.app/)
+[<img src="./src/assets/preview/facebook-button.png" width="163" height="42" />](https://www.facebook.com/unmaad.studio)
+[<img src="./src/assets/preview/insta-button.png" width="125" height="42" />](https://www.instagram.com/unmaad.studio/)
 
 ## Installation
 
@@ -17,14 +15,7 @@ Circle theme is going through a lot of changes. We are adding new components and
 - Install packages: `npm install`
 - Start the project: `npm start`
 
-## Todo
-
-- [ ] Add images to all README.md files
-- [ ] Capability to add background to [PageSection]
-
-## Changelog
-
-[Browse the changelog](./CHANGELOG.md)
+[![Change log](./src/assets/preview/changelog.png)](./CHANGELOG.md)
 
 ## Components List
 
@@ -78,7 +69,7 @@ Circle theme is going through a lot of changes. We are adding new components and
 - [x] [Theme Switcher](./src/widgets/ThemeSwitcher/)
 - [x] [Spacer](./src/widgets/Spacer/)
 - [x] [Seperator](./src/widgets/Seperator/)
-- [ ] Social Icons - TODO
+- [x] [Social Icons](./src/widgets/SocialMeidaRow/)
 
 ## Dialogs
 

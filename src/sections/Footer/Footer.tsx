@@ -1,5 +1,9 @@
 import { HiLocationMarker, HiMail, HiPhone } from "react-icons/hi";
+import SocialMediaRow, { SocialMediaItem } from "../../widgets/SocialMeidaRow/SocialMediaRow";
 import "./Footer.css";
+
+// Icons
+import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 
 /**
  * Footer Section Component, displays a footer at the bottom of the page.
@@ -21,6 +25,24 @@ export default function Footer() {
                 <div className="FooterLeft">
                     <h2>Circle Theme</h2>
                     <p>1234 Main Street<br />Anytown, USA<br />12345</p>
+                    <SocialMediaRow>
+                        <SocialMediaItem
+                            icon={<BsFacebook />}
+                            link="https://www.facebook.com"
+                        />
+                        <SocialMediaItem
+                            icon={<BsTwitter />}
+                            link="https://www.twitter.com"
+                        />
+                        <SocialMediaItem
+                            icon={<BsInstagram />}
+                            link="https://www.instagram.com"
+                        />
+                        <SocialMediaItem
+                            icon={<BsGithub />}
+                            link="https://www.github.com"
+                        />
+                    </SocialMediaRow>
                 </div>
 
                 {/* Right Content */}
