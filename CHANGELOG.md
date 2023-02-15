@@ -1,5 +1,15 @@
 ## Changelog
 
+### 1.1.2
+
+- [Theme Switcher](./src/widgets/ThemeSwitcher/) `README.md` added.
+- Changed [Theme Switcher](./src/widgets/ThemeSwitcher/) from class component to functional component.
+- [Theme Switcher](./src/widgets/ThemeSwitcher/) improved design and added dismiss button.
+- Added [Seperator](./src/widgets/Seperator/) widget.
+- Added 'scroll down' arrow to [IntroSection](./src/sections/IntroSection/) section.
+- Added 'pageSpacer' prop to [Navigation](./src/components/Navigation/) component.
+- Addedd 'scroll' effect to [Navigation](./src/components/Navigation/) component.
+
 ### 1.1.1
 
 - Demo added: [View Demo](https://circle-theme-app-unjsb.ondigitalocean.app/)

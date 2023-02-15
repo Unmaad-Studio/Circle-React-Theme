@@ -20,6 +20,7 @@ Circle theme is going through a lot of changes. We are adding new components and
 ## Todo
 
 - [ ] Add images to all README.md files
+- [ ] Capability to add background to [PageSection]
 
 ## Changelog
 
@@ -76,6 +77,7 @@ Circle theme is going through a lot of changes. We are adding new components and
 - [x] [Icon Button](./src/widgets/IconButton/)
 - [x] [Theme Switcher](./src/widgets/ThemeSwitcher/)
 - [x] [Spacer](./src/widgets/Spacer/)
+- [x] [Seperator](./src/widgets/Seperator/)
 - [ ] Social Icons - TODO
 
 ## Dialogs

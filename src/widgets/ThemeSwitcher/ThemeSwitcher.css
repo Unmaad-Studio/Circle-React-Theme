@@ -1,22 +1,22 @@
 /* Theme Switcher */
 .AppThemes {
   align-items: flex-start;
-  background-color: var(--color-background-light);
-  border-top-left-radius: var(--border-radius-large);
-  border-bottom-left-radius: var(--border-radius-large);
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-large);
   color: var(--color-text);
   display: flex;
   flex-direction: column;
   gap: 8px;
   justify-content: flex-end;
-  padding: 12px;
+  padding: 16px;
   position: fixed;
-  right: 0;
+  right: 32px;
   top: 50vh;
   text-align: center;
   transform: translateY(-50%);
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-  width: 150px;
+  width: 200px;
   z-index: 900;
 }
 
@@ -69,6 +69,9 @@
 }
 
 .AppThemesOpenButton svg {
-  color: var(--color-text);
   font-size: 1.2rem;
+}
+
+.AppThemesOpenButton:hover svg {
+  color: var(--color-text-primary);
 }

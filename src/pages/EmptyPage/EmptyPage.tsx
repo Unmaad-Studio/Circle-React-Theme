@@ -8,7 +8,7 @@ export default function EmptyPage() {
     return (
         <div className="EmptyPage">
             {/* Header */}
-            <NavigationBar />
+            <NavigationBar pageSpacer />
 
             {/* Page Content */}
             <PageContainer>

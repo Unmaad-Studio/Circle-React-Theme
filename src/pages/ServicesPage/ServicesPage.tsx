@@ -25,7 +25,7 @@ export default function ServicesPage() {
         <>
             <div className="ServicesPage">
                 {/* Header */}
-                <NavigationBar />
+                <NavigationBar pageSpacer />
 
                 {/* Page Content */}
                 <PageContainer>

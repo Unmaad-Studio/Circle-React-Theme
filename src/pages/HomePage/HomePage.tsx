@@ -47,8 +47,6 @@ export default function HomePage() {
                     <IntroSection />
                 </PageSection>
 
-                <Spacer height={96} />
-
                 {/* Services Section */}
                 <PageSection>
                     <SectionHeader

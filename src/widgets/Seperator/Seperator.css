@@ -1,0 +1,5 @@
+.seperator {
+  background-color: var(--color-background-light);
+  display: block;
+  width: 100%;
+}

@@ -1,5 +1,7 @@
-import { Component } from "react";
-import { HiCubeTransparent } from "react-icons/hi";
+import { useEffect, useState } from "react";
+import { HiCubeTransparent, HiX } from "react-icons/hi";
+import Button from "../Button/Button";
+import Seperator from "../Seperator/Seperator";
 import "./ThemeSwitcher.css";
 
 // Theme Object, used to define a theme
@@ -14,48 +16,19 @@ type Props = {
     defaultTheme: AppTheme;
 };
 
-// State for theme switcher
-type State = {
-    themeSwitcherOpen: boolean;
-    currentTheme: AppTheme;
-}
-
 /**
  * Theme switcher component. This component is responsible for switching
  * between themes.
- * 
- * @param props.themes The themes to switch between
- * @param props.defaultTheme The default theme
- * 
- * @returns The theme switcher component
+ * @param props Props for the theme switcher
+ * @returns {JSX.Element}
  */
-export default class ThemeSwitcher extends Component<Props, State> {
-    constructor(props: Props) {
-        super(props);
-        this.state = {
-            themeSwitcherOpen: false,
-            currentTheme: {
-                name: "Default",
-                fileName: "default"
-            }
-        };
+export default function ThemeSwitcher(props: Props): JSX.Element {
+    // State
+    const [themeSwitcherOpen, setThemeSwitcherOpen] = useState(false);
+    const [currentTheme, setCurrentTheme] = useState(props.defaultTheme);
 
-        // Bind methods
-        this.handleThemeSwitch = this.handleThemeSwitch.bind(this);
-        this.loadTheme = this.loadTheme.bind(this);
-    }
-
-    componentDidMount() {
-        // Load the theme from local storage
-        this.loadTheme();
-    }
-
-    /**
-     * Handle theme switch
-     * 
-     * @param theme The theme to switch to
-     */
-    handleThemeSwitch = (theme: AppTheme) => {
+    // Methods
+    const handleThemeSwitch = (theme: AppTheme) => {
         // Replace the filename in the link tag in the head
         const linkTag = document.querySelector("link[href*='theme.css']") as HTMLLinkElement;
 
@@ -66,58 +39,63 @@ export default class ThemeSwitcher extends Component<Props, State> {
         localStorage.setItem("theme", theme.fileName);
 
         // Update the state
-        this.setState({
-            currentTheme: theme,
-            themeSwitcherOpen: false
-        });
+        setCurrentTheme(theme);
+        setThemeSwitcherOpen(false);
     }
 
-    /**
-     * Load the theme from local storage
-     */
-    loadTheme = () => {
+    const loadTheme = () => {
         // Get the theme from local storage
         const theme = localStorage.getItem("theme");
 
         // If there is a theme, switch to it
         if (theme) {
-            this.handleThemeSwitch({
+            handleThemeSwitch({
                 name: "",
                 fileName: theme
             });
         }
     }
 
-    render() {
-        return (
-            <>
-                {
-                    // If the theme switcher is open, show the themes
-                    this.state.themeSwitcherOpen ? (
-                        <div className="AppThemes">
-                            <h3>Themes</h3>
-                            {
-                                this.props.themes.map((theme, index) => (
-                                    <button onClick={() => {
-                                        this.handleThemeSwitch(theme);
-                                    }} key={index}>
-                                        {theme.name}
-                                    </button>
-                                ))
-                            }
-                        </div>
-                    ) : (
-                        // Otherwise, show the open button
-                        <div className="AppThemesOpenButton" onClick={() => {
-                            this.setState({
-                                themeSwitcherOpen: true
-                            });
+    useEffect(() => {
+        // Load the theme from local storage
+        loadTheme();
+    }, []);
+
+    return (
+        <>
+            {
+                // If the theme switcher is open, show the themes
+                themeSwitcherOpen ? (
+                    <div className="AppThemes">
+                        <h3>Themes</h3>
+                        {
+                            props.themes.map((theme, index) => (
+                                <Button onClick={() => {
+                                    handleThemeSwitch(theme);
+                                }} key={index}>
+                                    {theme.name}
+                                </Button>
+                            ))
+                        }
+
+                        <Seperator spacing={12} />
+                        {/* Dismiss Button */}
+                        <Button onClick={() => {
+                            setThemeSwitcherOpen(false);
                         }}>
-                            <HiCubeTransparent />
-                        </div>
-                    )
-                }
-            </>
-        );
-    }
+                            <HiX />
+                            Dismiss
+                        </Button>
+                    </div>
+                ) : (
+                    // Otherwise, show the open button
+                    <div className="AppThemesOpenButton" onClick={() => {
+                        setThemeSwitcherOpen(true);
+                    }}>
+                        <HiCubeTransparent />
+                    </div>
+                )
+            }
+        </>
+    );
 }

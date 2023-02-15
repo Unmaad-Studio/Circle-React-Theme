@@ -13,7 +13,7 @@ export default function NotFoundPage() {
     return (
         <div className="NotFoundPage">
             {/* Header */}
-            <NavigationBar />
+            <NavigationBar pageSpacer />
 
             {/* Page Content */}
             <PageContainer>

@@ -72,15 +72,17 @@ export default class WorksContainer extends React.Component<Props, State> {
                         })
                     }
                 </WorkCategories>
-
                 <Spacer height={32} />
-
                 <GridContainer>
                     {
                         this.props.cardsData.map((child, index) => {
                             if (child.categoryId !== this.state.activeCategory && this.state.activeCategory !== "all") return (<></>);
                             return (
-                                <Card cardImage={child.image} cardStyle={CardStyle.ContentOverlay}>
+                                <Card
+                                    key={index}
+                                    cardImage={child.image}
+                                    cardStyle={CardStyle.ContentOverlay}
+                                >
                                     <h3>{child.title}</h3>
                                 </Card>
                             );

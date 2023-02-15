@@ -16,7 +16,7 @@ export default function BlogViewPage() {
     return (
         <div className="BlogViewPage">
             {/* Header */}
-            <NavigationBar />
+            <NavigationBar pageSpacer />
 
             {/* Page Content */}
             <PageContainer>

@@ -1,124 +1,136 @@
-import { Component } from "react";
+import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import IconButton, { IconButtonType } from "../../widgets/IconButton/IconButton";
 import NavMenuItem from "./NavMenuItem";
 import "./Navigation.css";
 
 type Props = {
-    title: string; // The title of the navigation bar
-    menuItems: NavMenuItem[]; // The menu items that will be displayed in the navigation bar
-    actions: JSX.Element[]; // The actions that will be displayed in the navigation bar on the right side
+    title: string;
+    menuItems: NavMenuItem[];
+    actions: JSX.Element[];
+    pageSpacer?: boolean;
 };
 
-type State = {
-    activeRoute: string; // This will be used to determine which menu item is active
-    mobileMenuOpen: boolean; // This will be used to determine if the mobile menu is open or not
-};
+export default function Navigation(props: Props): JSX.Element {
+    // State
+    const activeRoute = window.location.pathname;
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
-export default class Navigation extends Component<Props, State> {
-    constructor(props: Props) {
-        super(props);
-        this.state = {
-            activeRoute: window.location.pathname,
-            mobileMenuOpen: false
-        };
-    }
+    // Event Handlers
+    const handleScroll = () => {
+        if (window.scrollY > 0) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+    };
 
-    render() {
-        return (
-            <>
-                {/* The navigation bar will be displayed as a div with the class "NavigationBar" */}
-                <header className="NavigationBar">
+    // Effects
+    window.addEventListener("scroll", handleScroll);
 
-                    {/* Responsive Wrapper */}
-                    <div className="NavigationBarInnerContainer">
+    // Scrolled class
+    const scrolledClass = scrolled ? "scrolled" : "";
 
-                        {/* Logo */}
-                        <div className="NavLogo">
-                            <a href="/">
-                                {this.props.title}
-                            </a>
-                        </div>
+    return (
+        <>
+            {/* The navigation bar will be displayed as a div with the class "NavigationBar" */}
+            <header className={"NavigationBar " + scrolledClass}>
 
-                        {/* Menu */}
-                        <div className="NavMenu">
-                            <ul>
-                                {
-                                    this.props.menuItems.map((item, index) => {
-                                        return (
-                                            <li key={index}>
-                                                <a href={item.href} className={this.state.activeRoute === item.href ? "active" : ""}>
-                                                    {item.label}
-                                                </a>
-                                            </li>
-                                        );
-                                    })
-                                }
-                            </ul>
-                        </div>
+                {/* Responsive Wrapper */}
+                <div className="NavigationBarInnerContainer">
 
-                        {/* Actions */}
-                        <div className="NavActions">
-                            <ul>
-                                {
-                                    this.props.actions.map((action, index) => {
-                                        return (
-                                            <li key={index}>
-                                                {action}
-                                            </li>
-                                        );
-                                    })
-                                }
-                            </ul>
-                        </div>
-
-                        {/* Mobile Nav Button */}
-                        <div className="NavMobileButton">
-                            <IconButton
-                                type={IconButtonType.Solid}
-                                onClick={() => this.setState({ mobileMenuOpen: !this.state.mobileMenuOpen })}
-                            >
-                                {
-                                    this.state.mobileMenuOpen ?
-                                        <HiX /> :
-                                        <HiMenu />
-                                }
-                            </IconButton>
-                        </div>
+                    {/* Logo */}
+                    <div className="NavLogo">
+                        <a href="/">
+                            {props.title}
+                        </a>
                     </div>
-                </header>
 
-                {/* Mobile Nav Menu */}
-                <div className={`MobileNavMenu ${this.state.mobileMenuOpen ? "open" : ""}`}>
-                    <ul className="MobileNavLinks">
-                        {
-                            this.props.menuItems.map((item, index) => {
-                                return (
-                                    <li key={index}>
-                                        <a href={item.href} className={this.state.activeRoute === item.href ? "active" : ""}>
-                                            {item.label}
-                                        </a>
-                                    </li>
-                                );
-                            })
-                        }
-                    </ul>
-                    <ul className="MobileNavActions">
-                        {
-                            this.props.actions.map((action, index) => {
-                                return (
-                                    <li key={index}>
-                                        {action}
-                                    </li>
-                                );
-                            })
-                        }
-                    </ul>
+                    {/* Menu */}
+                    <div className="NavMenu">
+                        <ul>
+                            {
+                                props.menuItems.map((item, index) => {
+                                    return (
+                                        <li key={index}>
+                                            <a href={item.href} className={activeRoute === item.href ? "active" : ""}>
+                                                {item.label}
+                                            </a>
+                                        </li>
+                                    );
+                                })
+                            }
+                        </ul>
+                    </div>
+
+                    {/* Actions */}
+                    <div className="NavActions">
+                        <ul>
+                            {
+                                props.actions.map((action, index) => {
+                                    return (
+                                        <li key={index}>
+                                            {action}
+                                        </li>
+                                    );
+                                })
+                            }
+                        </ul>
+                    </div>
+
+                    {/* Mobile Nav Button */}
+                    <div className="NavMobileButton">
+                        <IconButton
+                            type={IconButtonType.Solid}
+                            onClick={() => {
+                                setMobileMenuOpen(!mobileMenuOpen);
+                            }}
+                        >
+                            {
+                                mobileMenuOpen ?
+                                    <HiX /> :
+                                    <HiMenu />
+                            }
+                        </IconButton>
+                    </div>
                 </div>
+            </header>
 
-                {/* Navigation Spacer */}
-                <div className="NavigationBarSpacer" />
-            </>
-        );
-    }
+            {/* Mobile Nav Menu */}
+            <div className={`MobileNavMenu ${mobileMenuOpen ? "open" : ""}`}>
+                <ul className="MobileNavLinks">
+                    {
+                        props.menuItems.map((item, index) => {
+                            return (
+                                <li key={index}>
+                                    <a href={item.href} className={activeRoute === item.href ? "active" : ""}>
+                                        {item.label}
+                                    </a>
+                                </li>
+                            );
+                        })
+                    }
+                </ul>
+                <ul className="MobileNavActions">
+                    {
+                        props.actions.map((action, index) => {
+                            return (
+                                <li key={index}>
+                                    {action}
+                                </li>
+                            );
+                        })
+                    }
+                </ul>
+            </div>
+
+            {/* Navigation Spacer */}
+            {
+                props.pageSpacer && (
+                    <div className="NavigationBarSpacer" />
+                )
+            }
+        </>
+    );
 }

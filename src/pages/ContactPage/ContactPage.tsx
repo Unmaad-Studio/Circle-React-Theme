@@ -18,7 +18,7 @@ export default function ContactPage() {
     return (
         <div className="ContactPage">
             {/* Header */}
-            <NavigationBar />
+            <NavigationBar pageSpacer />
 
             {/* Page Content */}
             <PageContainer>
