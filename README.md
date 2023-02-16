@@ -22,25 +22,25 @@ Circle theme is going through a lot of changes. We are adding new components and
 - [x] [Card](./src/components/Card/) - [Added in 1.1.0]
 - [x] ~~Blog Card~~ - [Removed - Replaced with Card]
 - [x] [Cta Box](./src/components/CtaBox/)
-- [ ] Feature Box - [Pro Version, Not Available Yet]
+- [ ] Feature Box
 - [x] [Icon Card](./src/components/IconCard/)
 - [x] [Logo Carousel](./src/components/LogoCarousel/)
 - [x] ~~Work Card~~ - [Removed - Replaced with Card]
 - [x] [Work Categories](./src/components/WorkCategories/)
-- [x] [Team Member Card](./src/components/TeamMemberCard/)
+- [x] ~~Team Member Card~~ - [Removed - Replaced with Card]
 - [x] [Section Header](./src/components/SectionHeader/)
-- [ ] Testimonial Card - [Pro Version, Not Available Yet]
+- [ ] [Testimonial](./src/components/Testimonial/) - [Added in 1.1.4]
 - [x] [Pricing Card](./src/components/PricingCard/)
-- [ ] Pricing Table - [Pro Version, Not Available Yet]
+- [ ] Pricing Table
 - [x] [FAQ Accordion](./src/components/FaqAccordion/)
 
 ## Sections List
 
 - [x] [Intro Section](./src/sections/IntroSection/) // TODO: Rename to Hero Section
-- [ ] Hero 2 Section - [Pro Version - Not Available Yet]
+- [ ] Hero 2 Section
 - [x] [Header Section](./src/sections/HeaderSection/)
 - [x] [Footer Section](./src/sections/FooterSection/)
-- [ ] Works Section - [Pro Version - Not Available Yet]
+- [ ] Works Section
 
 ## Layouts List
 
@@ -54,13 +54,13 @@ Circle theme is going through a lot of changes. We are adding new components and
 - [x] [Home](./src/pages/HomePage/)
 - [x] [About](./src/pages/AboutPage/)
 - [x] [Services](./src/pages/ServicesPage/)
-- [ ] Works - [Pro Version - Not Available Yet]
-- [ ] Work Single - [Pro Version - Not Available Yet]
+- [ ] Works
+- [ ] Work Single
 - [x] [Blogs](./src/pages/BlogsPage/)
 - [x] [Blog Single](./src/pages/BlogSinglePage/)
 - [x] [Contact](./src/pages/ContactPage/)
 - [x] [404](./src/pages/NotFoundPage/)
-- [ ] Documentation - [Pro Version - Not Available Yet]
+- [ ] Documentation
 
 ## Widgets
 
@@ -73,8 +73,8 @@ Circle theme is going through a lot of changes. We are adding new components and
 
 ## Dialogs
 
-- [ ] Subscribe - [Pro Version - Not Available Yet]
-- [ ] Contact Form - [Pro Version - Not Available Yet]
+- [ ] Subscribe
+- [ ] Contact Form
 
 ## Credits
 

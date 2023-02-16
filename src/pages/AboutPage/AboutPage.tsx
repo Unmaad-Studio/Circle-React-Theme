@@ -2,7 +2,6 @@ import CtaBox from "../../components/CtaBox/CtaBox";
 import Footer from "../../sections/Footer/Footer";
 import NavigationBar from "../../sections/NavigationBar/NavigationBar";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
-import TeamMemberCard from "../../components/TeamMemberCard/TeamMemberCard";
 import GridContainer from "../../layouts/GridContainer";
 import PageContainer from "../../layouts/PageContainer";
 import PageSection from "../../layouts/PageSection";
@@ -15,6 +14,7 @@ import teamMember2 from "../../assets/images/team-member-2.jpg";
 import teamMember3 from "../../assets/images/team-member-3.jpg";
 import ctaImage from "../../assets/images/cta.png";
 import Button from "../../widgets/Button/Button";
+import Card from "../../components/Card/Card";
 
 
 /**
@@ -68,24 +68,27 @@ export default function AboutPage() {
                     <Spacer height={32} />
 
                     <GridContainer>
-                        <TeamMemberCard
-                            name="John Doe"
-                            title="CEO"
-                            image={teamMember1}
-                            description="John is the CEO of Circle Theme. He is a passionate individual who loves to create beautiful websites."
-                        />
-                        <TeamMemberCard
-                            name="Jane Doe"
-                            title="Founder and CEO"
-                            image={teamMember2}
-                            description="Jane is the CEO of Circle Theme. She is a passionate individual who loves to create beautiful websites. She is also a great painter."
-                        />
-                        <TeamMemberCard
-                            name="Mark Doe"
-                            title="Manager"
-                            image={teamMember3}
-                            description="Mark is the Manager of Circle Theme. He is a passionate individual who loves to create beautiful websites. He is also a great cook."
-                        />
+                        <Card cardImage={teamMember1}>
+                            <h3>John Doe</h3>
+                            <Spacer height={8} />
+                            <h4 style={{ color: "var(--color-primary)" }}>CEO</h4>
+                            <Spacer height={16} />
+                            <p>John is the CEO of Circle Theme. He is a passionate individual who loves to create beautiful websites.</p>
+                        </Card>
+                        <Card cardImage={teamMember2}>
+                            <h3>Jane Doe</h3>
+                            <Spacer height={8} />
+                            <h4 style={{ color: "var(--color-primary)" }}>Founder and CEO</h4>
+                            <Spacer height={16} />
+                            <p>Jane is the CEO of Circle Theme. She is a passionate individual who loves to create beautiful websites. She is also a great painter.</p>
+                        </Card>
+                        <Card cardImage={teamMember3}>
+                            <h3>Mark Doe</h3>
+                            <Spacer height={8} />
+                            <h4 style={{ color: "var(--color-primary)" }}>CEO</h4>
+                            <Spacer height={16} />
+                            <p>Mark is the Manager of Circle Theme. He is a passionate individual who loves to create beautiful websites. He is also a great cook.</p>
+                        </Card>
                     </GridContainer>
                 </PageSection>
 

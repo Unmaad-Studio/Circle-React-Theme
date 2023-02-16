@@ -1,4 +1,3 @@
-import React from "react";
 import { HiCloud, HiCode, HiDeviceTablet, HiPuzzle, HiSortDescending, HiVideoCamera } from "react-icons/hi";
 import Footer from "../../sections/Footer/Footer";
 import NavigationBar from "../../sections/NavigationBar/NavigationBar";
@@ -31,6 +30,8 @@ import ClientLogoSeven from "../../assets/images/client-logo-7.svg";
 import ClientLogoEight from "../../assets/images/client-logo-8.svg";
 import Card, { CardStyle } from "../../components/Card/Card";
 import Button from "../../widgets/Button/Button";
+import TestimonialContainer from "../../components/Testimonial/TestimonialContainer";
+import Testimonial from "../../components/Testimonial/Testimonial";
 
 
 export default function HomePage() {
@@ -178,8 +179,43 @@ export default function HomePage() {
 
                 </PageSection>
 
+                <Spacer height={48} />
 
-                <Spacer height={96} />
+                {/* Testimonials Section */}
+                <PageSection>
+                    <TestimonialContainer
+                        backgroundImage="https://images.unsplash.com/photo-1518672703296-e3022657f7b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+                        header={
+                            <SectionHeader
+                                heading="Testimonials"
+                                subHeading="What our clients say about us."
+                                centerContent
+                            />
+                        }
+                        showIndicators
+                    >
+                        <Testimonial
+                            name="John Doe"
+                            designation="CEO, ABC Company"
+                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel quam et tellus tincidunt fermentum. Nulla facilisi."
+                            image={ImageOne}
+                        />
+                        <Testimonial
+                            name="Jane Doe"
+                            designation="CEO & Founder, ABC Company"
+                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel quam et tellus tincidunt fermentum. Nulla facilisi."
+                            image={ImageOne}
+                        />
+                        <Testimonial
+                            name="Mark Doe"
+                            designation="Senior Developer, ABC Company"
+                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel quam et tellus tincidunt fermentum. Nulla facilisi."
+                            image={ImageOne}
+                        />
+                    </TestimonialContainer>
+                </PageSection>
+
+                <Spacer height={48} />
 
                 {/* CTA Section */}
                 <PageSection>

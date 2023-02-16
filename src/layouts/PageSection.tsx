@@ -1,27 +1,26 @@
 // Props for page section
 type Props = {
-    id?: string; // The id to apply to the container - [optional]
-    className?: string; // The class name to apply to the container - [optional]
-    children: React.ReactNode; // The children to render
-    style?: React.CSSProperties; // The style to apply to the container - [optional]
+    id?: string;
+    className?: string;
+    children: React.ReactNode;
+    lightBackground?: boolean; // Depends on the theme property - [--background-light]. Background can also be changed using the style property.
+    style?: React.CSSProperties;
 };
 
 /**
  * Page section component, used to wrap items in a page layout.
- * 
- * @param id The id to apply to the container.
- * @param children The children to render.
- * @param className The class name to apply to the container.
- * @param style The style to apply to the container.
- * 
- * @returns The page section component.
+ * @param props The props for the page section component.
+ * @returns {JSX.Element}
  */
-export default function PageSection(props: Props) {
+export default function PageSection(props: Props): JSX.Element {
     return (
         <section
             id={props.id}
             className={`PageSection ${props.className}`}
-            style={props.style}
+            style={{
+                ...props.style,
+                backgroundColor: props.lightBackground ? 'var(--color-background-light)' : 'var(--color-background)',
+            }}
         >
             {props.children}
         </section>

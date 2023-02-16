@@ -21,7 +21,7 @@ export default function SectionHeader(props: Props): JSX.Element {
     const headerClass = props.centerContent ? "SectionHeader CenterContent" : "SectionHeader";
 
     return (
-        <div id={props.id} className={headerClass}>
+        <div id={props.id} className={headerClass} style={props.style}>
             <div className="Left">
                 <h2 className="SectionHeaderTitle">{props.heading}</h2>
                 {

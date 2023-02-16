@@ -1,5 +1,11 @@
 ## Changelog
 
+### 1.1.4
+
+- Added 'lightBackground' prop to [PageSection](./src/layouts/PageSection.tsx) layout.
+- Team member card removed, replaced with [Card](./src/components/Card/) component.
+- Added [Testimonial](./src/components/Testimonial/) component.
+
 ### 1.1.3
 
 - Improved `README.md` design and documentation.
