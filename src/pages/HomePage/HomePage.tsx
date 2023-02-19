@@ -18,6 +18,9 @@ import LogoCarousel from "../../components/LogoCarousel/LogoCarousel";
 import ImageOne from "../../assets/images/image-1.jpg";
 import ImageTwo from "../../assets/images/image-2.jpg";
 import ImageThree from "../../assets/images/image-3.jpg";
+import teamMember1 from "../../assets/images/team-member-1.jpg";
+import teamMember2 from "../../assets/images/team-member-2.jpg";
+import teamMember3 from "../../assets/images/team-member-3.jpg";
 
 // Client Logos
 import ClientLogoOne from "../../assets/images/client-logo-1.svg";
@@ -198,19 +201,19 @@ export default function HomePage() {
                             name="John Doe"
                             designation="CEO, ABC Company"
                             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel quam et tellus tincidunt fermentum. Nulla facilisi."
-                            image={ImageOne}
+                            image={teamMember1}
                         />
                         <Testimonial
                             name="Jane Doe"
                             designation="CEO & Founder, ABC Company"
                             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel quam et tellus tincidunt fermentum. Nulla facilisi."
-                            image={ImageOne}
+                            image={teamMember2}
                         />
                         <Testimonial
                             name="Mark Doe"
                             designation="Senior Developer, ABC Company"
                             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel quam et tellus tincidunt fermentum. Nulla facilisi."
-                            image={ImageOne}
+                            image={teamMember3}
                         />
                     </TestimonialContainer>
                 </PageSection>

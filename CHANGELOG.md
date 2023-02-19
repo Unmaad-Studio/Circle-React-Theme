@@ -1,5 +1,9 @@
 ## Changelog
 
+### 1.1.5
+
+- Fixed image prop in [Testimonial](./src/components/Testimonial/) component.
+
 ### 1.1.4
 
 - Added 'lightBackground' prop to [PageSection](./src/layouts/PageSection.tsx) layout.

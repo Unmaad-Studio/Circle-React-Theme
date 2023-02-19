@@ -29,7 +29,7 @@ Circle theme is going through a lot of changes. We are adding new components and
 - [x] [Work Categories](./src/components/WorkCategories/)
 - [x] ~~Team Member Card~~ - [Removed - Replaced with Card]
 - [x] [Section Header](./src/components/SectionHeader/)
-- [ ] [Testimonial](./src/components/Testimonial/) - [Added in 1.1.4]
+- [x] [Testimonial](./src/components/Testimonial/) - [Added in 1.1.4]
 - [x] [Pricing Card](./src/components/PricingCard/)
 - [ ] Pricing Table
 - [x] [FAQ Accordion](./src/components/FaqAccordion/)

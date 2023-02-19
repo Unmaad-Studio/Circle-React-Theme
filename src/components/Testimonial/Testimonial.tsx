@@ -26,7 +26,7 @@ export default function Testimonial(props: Props): JSX.Element {
 
             <div className="Testimonial__Person">
                 <div className="Testimonial__Person__Image">
-                    <img src="https://via.placeholder.com/150" alt="Testimonial" />
+                    <img src={props.image} alt="Testimonial" />
                 </div>
                 <h4>{props.name}</h4>
                 <p>{props.designation}</p>
